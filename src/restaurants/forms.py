@@ -1,6 +1,7 @@
 from django import forms
 
 from .models import RestaurantLocation
+from .validators import validate_category
 
 class RestaurantCreateForm(forms.Form):
     name = forms.CharField()
@@ -15,6 +16,9 @@ class RestaurantCreateForm(forms.Form):
 
 
 class RestaurantLocationCreateForm(forms.ModelForm):
+    # email = forms.EmailField()
+    # category = forms.CharField(required=False, validators=[validate_category])
+
     class Meta:
         model = RestaurantLocation
         fields = [
@@ -28,3 +32,9 @@ class RestaurantLocationCreateForm(forms.ModelForm):
         if name == "Hello":
             raise forms.ValidationError("Not a valid name")
         return name
+
+
+# // Write a function which takes a collection of integers and returns the first duplicate found
+
+
+

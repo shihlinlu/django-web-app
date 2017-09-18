@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from restaurants.views import (
+    restaurant_createview,
     restaurant_listview,
     RestaurantListView,
     RestaurantDetailView,
