@@ -12,6 +12,11 @@
 	{{ form.as_p }}
 	<button type="submit">Save</button>
 </form>
+
+{% if form.instance %}
+<h1>{{ form.instance.name }}</h1>
+{% endif %}
+
 {% endblock %}
 
 	<!--<input type="text" name="name" placeholder="Your Title" required=required><br/>-->
