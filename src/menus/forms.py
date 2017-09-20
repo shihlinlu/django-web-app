@@ -3,6 +3,7 @@ from django import forms
 from .models import Item
 from restaurants.models import RestaurantLocation
 
+
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item

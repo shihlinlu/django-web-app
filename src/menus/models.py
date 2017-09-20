@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 
 from restaurants.models import RestaurantLocation
 
-# Create your models here.
+
 class Item(models.Model):
     # associations
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
