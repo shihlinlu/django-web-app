@@ -17,7 +17,8 @@ CATEGORIES = [
     'Mexican',
     'Asian',
     'American',
-    'Whatever'
+    'Whatever',
+    'Vegan'
 ]
 
 def validate_category(value):
