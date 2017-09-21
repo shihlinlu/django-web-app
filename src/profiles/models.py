@@ -19,7 +19,7 @@ class ProfileManager(models.Manager):
         else:
             profile_.followers.add(user)
             is_following = True
-        return profile_, is_following
+        return is_following
 
 
 class Profile(models.Model):
@@ -35,6 +35,10 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    def send_activation_email(self):
+        print("Activation")
+        pass
 
 
 def post_save_user_receiver(sender, instance, created, *args, **kwargs):
